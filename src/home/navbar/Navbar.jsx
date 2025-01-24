@@ -71,7 +71,7 @@ const Navbar = () => {
             </div>
 
 
-            <div className="navbar-end gap-2 relative">
+            <div className="navbar-end gap-2 relative z-[50]">
             {user ? (
                 <div className="flex items-center gap-1 md:gap-4 lg:gap-4">
                     {user.photoURL && (
@@ -84,7 +84,7 @@ const Navbar = () => {
                             />
 
                             {isDropdownOpen && (
-                                <div className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-lg p-3">
+                                <div className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-lg p-3 z-[100]">
                                     <span className="block text-center text-sm font-medium text-gray-700">{user.displayName}</span>
                                     <Link to="/dashboard" className="block text-center px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</Link>
                                     <button
