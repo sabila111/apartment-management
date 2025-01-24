@@ -1,7 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 import './Navbar.css'
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { FaRegUserCircle } from "react-icons/fa";
 
 
 
@@ -9,6 +10,13 @@ const Navbar = () => {
 
     
     const { user, logOut } = useContext(AuthContext)
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
 
     const handleSignOut = () => {
         logOut()
@@ -48,7 +56,10 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-xl font-semibold"><span className="text-4xl font-bold text-indigo-600 -mr-2 mb-3">Kind</span>Hive</a>
+                <div className="flex items-center gap-2">
+                    <img className="w-14 h-14" src="https://i.ibb.co.com/2ZnYjVW/602232.png" alt="" />
+                <a className=" text-2xl font-bold">BuildEase</a>
+                </div>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="  active mx-5  flex justify-center items-center gap-6 px-1 menu-horizontal font-medium text-lg ">
@@ -58,51 +69,45 @@ const Navbar = () => {
 
                 </ul>
             </div>
-            <div className="navbar-end gap-2">
-                {
-                    user ?
-                        <div className="relative group flex items-center gap-1 md:gap-4 lg:gap-4 ">
-                            {user.photoURL && (
-                                <>
 
-                                    <img
-                                        src={user.photoURL}
-                                        alt=""
-                                        className="w-12 h-12 rounded-full cursor-pointer"
-                                    />
-                                    
-                                    
-                                        <div className="absolute top-16 left-0 hidden w-40 bg-white shadow-md p-3 rounded-lg text-center group-hover:flex flex-col gap-2">
-                                        <span className="text-sm font-medium text-gray-700">{user.displayName}</span>
-                                        <button
-                                            onClick={handleSignOut}
-                                            className="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-500"
-                                        >
-                                            Logout
-                                        </button>
-                                    </div>
 
-                                    
-                                </>
+            <div className="navbar-end gap-2 relative">
+            {user ? (
+                <div className="flex items-center gap-1 md:gap-4 lg:gap-4">
+                    {user.photoURL && (
+                        <div className="relative">
+                            <img
+                                src={user.photoURL}
+                                alt="Profile"
+                                className="w-12 h-12 rounded-full cursor-pointer"
+                                onClick={toggleDropdown}
+                            />
+
+                            {isDropdownOpen && (
+                                <div className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-lg p-3">
+                                    <span className="block text-center text-sm font-medium text-gray-700">{user.displayName}</span>
+                                    <Link to="/dashboard" className="block text-center px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</Link>
+                                    <button
+                                        onClick={handleSignOut}
+                                        className="w-full px-4 py-2 mt-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
                             )}
-
                         </div>
-
-
-                        :
-                        <div className='flex items-center gap-4'>
-                            <Link to={'/login'}>
-                                <button className="py-3 px-5 text-white font-medium rounded-lg bg-gradient-to-r from-indigo-700 to-cyan-400  ">Login</button>
-                            </Link>
-                            <Link to={'/register'}>
-                                <button className="py-3 px-5 text-white font-medium rounded-lg bg-gradient-to-r from-indigo-700 to-cyan-400">Register</button>
-                            </Link>
-                        </div>
-
-
-                }
-
-            </div>
+                    )}
+                </div>
+            ) : (
+                <div className="flex items-center gap-4">
+                    <Link to="/login">
+                        <button className="py-2 px-2 text-white text-xl font-medium rounded-full bg-gradient-to-r from-indigo-700 to-cyan-400">
+                            <FaRegUserCircle />
+                        </button>
+                    </Link>
+                </div>
+            )}
+        </div>
         </div>
     );
 };
