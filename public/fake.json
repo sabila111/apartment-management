@@ -1,0 +1,184 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/BtHjd0P/1.jpg", 
+      "floor_no": 3,
+      "block_name": "A",
+      "apartment_no": "A-301",
+      "rent": 1500,
+      "status": "Available"
+    },
+    {
+        "id": 2,
+      "image": "https://i.ibb.co.com/kJsv3VC/Bn.webp", 
+      "floor_no": 2,
+      "block_name": "B",
+      "apartment_no": "B-202",
+      "rent": 1800,
+      "status": "Available"
+    },
+    {
+        "id": 3,
+      "image": "https://i.ibb.co.com/JRmMWvN/pexels-chaitaastic-1918291.jpg", 
+      "floor_no": 5,
+      "block_name": "C",
+      "apartment_no": "C-503",
+      "rent": 1200,
+      "status": "Available"
+    },
+    {
+      "id": 4,
+      "image": "https://via.placeholder.com/300", 
+      "floor_no": 1,
+      "block_name": "A",
+      "apartment_no": "A-101",
+      "rent": 2000,
+      "status": "Available"
+    },
+    {
+      "id": 5,
+      "image": "https://via.placeholder.com/300", 
+      "floor_no": 4,
+      "block_name": "D",
+      "apartment_no": "D-401",
+      "rent": 2500,
+      "status": "Available"
+    },
+    {
+      "id": 6,
+      "image": "https://via.placeholder.com/300", 
+      "floor_no": 2,
+      "block_name": "E",
+      "apartment_no": "E-202",
+      "rent": 1000,
+      "status": "Available"
+    },
+    {
+      "id": 7,
+      "image": "https://via.placeholder.com/300", 
+      "floor_no": 3,
+      "block_name": "B",
+      "apartment_no": "B-303",
+      "rent": 1700,
+      "status": "Available"
+    },
+    {
+      "id": 8,
+      "image": "https://via.placeholder.com/300", 
+      "floor_no": 6,
+      "block_name": "C",
+      "apartment_no": "C-601",
+      "rent": 1300,
+      "status": "Available"
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co.com/kJsv3VC/Bn.webp", 
+      "floor_no": 1,
+      "block_name": "E",
+      "apartment_no": "E-101",
+      "rent": 1400,
+      "status": "Available"
+    },
+    {
+      "id": 10,
+      "image": "https://via.placeholder.com/300", 
+      "floor_no": 4,
+      "block_name": "D",
+      "apartment_no": "D-402",
+      "rent": 1600,
+      "status": "Available"
+    },
+    {
+          "id": 11,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 7,
+          "block_name": "F",
+          "apartment_no": "F-701",
+          "rent": 2200,
+          "status": "Available"
+        },
+        {
+          "id": 12,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 5,
+          "block_name": "A",
+          "apartment_no": "A-501",
+          "rent": 1900,
+          "status": "Available"
+        },
+        {
+          "id": 13,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 8,
+          "block_name": "B",
+          "apartment_no": "B-801",
+          "rent": 2300,
+          "status": "Available"
+        },
+        {
+          "id": 14,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 6,
+          "block_name": "C",
+          "apartment_no": "C-602",
+          "rent": 1800,
+          "status": "Available"
+        },
+        {
+          "id": 15,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 2,
+          "block_name": "D",
+          "apartment_no": "D-203",
+          "rent": 2100,
+          "status": "Available"
+        },
+        {
+          "id": 16,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 3,
+          "block_name": "E",
+          "apartment_no": "E-304",
+          "rent": 1200,
+          "status": "Available"
+        },
+        {
+          "id": 17,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 9,
+          "block_name": "F",
+          "apartment_no": "F-903",
+          "rent": 2500,
+          "status": "Available"
+        },
+        {
+          "id": 18,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 10,
+          "block_name": "A",
+          "apartment_no": "A-1001",
+          "rent": 2700,
+          "status": "Available"
+        },
+        {
+          "id": 19,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 4,
+          "block_name": "B",
+          "apartment_no": "B-404",
+          "rent": 1400,
+          "status": "Available"
+        },
+        {
+          "id": 20,
+          "image": "https://via.placeholder.com/300", 
+          "floor_no": 5,
+          "block_name": "C",
+          "apartment_no": "C-505",
+          "rent": 1600,
+          "status": "Available"
+        }
+      
+  ]
+  

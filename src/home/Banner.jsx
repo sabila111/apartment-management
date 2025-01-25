@@ -25,7 +25,7 @@ const Banner = () => {
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white text-center p-6">
                         <h1 className="text-4xl md:text-5xl font-extrabold animate-fade-in">{slide.title}</h1>
                         <p className="text-lg md:text-xl mt-3 opacity-90">{slide.subtitle}</p>
-                        <button className="mt-6 px-6 py-3 bg-indigo-500 text-white text-lg font-semibold rounded-lg hover:bg-indigo-600 transition">
+                        <button className="mt-6 px-6 py-3 bg-green-700 text-white text-lg font-semibold rounded-lg hover:bg-indigo-600 transition">
                             Learn More
                         </button>
                     </div>
