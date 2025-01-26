@@ -79,7 +79,7 @@ const Register = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-indigo-700 to-cyan-400">
+    <div className="min-h-screen bg-gradient-to-r from-cyan-800 to-cyan-500 ">
       <div className="hero-content flex-col lg:flex-row-reverse gap-52">
         
         <div className="card  w-full max-w-sm shrink-0 ">
@@ -123,7 +123,7 @@ const Register = () => {
               </button>
             </div>
             <div className=" mt-5">
-              <button className="px-4 py-3 rounded-lg bg-indigo-800 text-white">Register</button>
+              <button className="px-4 py-3 rounded-lg bg-cyan-800 text-white">Register</button>
             </div>
 
             <div className="divider">OR</div>

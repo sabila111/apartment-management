@@ -52,11 +52,11 @@ const Login = () => {
   }
 
   return (
-    <div className="pb-10 bg-gradient-to-r from-indigo-700 to-cyan-400">
+    <div className=" min-h-screen bg-gradient-to-r from-cyan-800 to-cyan-500 ">
       <div className="hero-content flex-col lg:flex-row-reverse gap-52">
     
-        <div className="card  w-full max-w-sm shrink-0 ">
-          <h1 className="text-5xl font-bold ml-8 mt-8 text-white">Login now</h1>
+        <div className="card  w-full max-w-sm  ">
+          <h1 className="text-5xl font-bold ml-8 mt-20 text-white">Login now</h1>
 
           <form onSubmit={handleLogin} className="card-body">
 
@@ -74,7 +74,7 @@ const Login = () => {
               <input type='password' placeholder="password" name="password" className="input input-bordered" required />
             </div>
             <div className=" mt-5">
-              <button className="px-4 py-3 rounded-lg bg-indigo-800 text-white">Login</button>
+              <button className="px-4 py-3 rounded-lg bg-cyan-800 text-white">Login</button>
             </div>
 
             <div className="divider">OR</div>

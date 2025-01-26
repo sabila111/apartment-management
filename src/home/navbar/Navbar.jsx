@@ -89,7 +89,7 @@ const Navbar = () => {
                                     <Link to="/dashboard" className="block text-center px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</Link>
                                     <button
                                         onClick={handleSignOut}
-                                        className="w-full px-4 py-2 mt-2 bg-indigo-500 text-white rounded hover:bg-indigo-600"
+                                        className="w-full px-4 py-2 mt-2 bg-gradient-to-r from-cyan-700 to-cyan-500 text-white rounded hover:bg-gradient-to-r from-cyan-700 to-cyan-500"
                                     >
                                         Logout
                                     </button>
@@ -101,7 +101,7 @@ const Navbar = () => {
             ) : (
                 <div className="flex items-center gap-4">
                     <Link to="/login">
-                        <button className="py-2 px-2 text-white text-xl font-medium rounded-full bg-gradient-to-r from-indigo-700 to-cyan-400">
+                        <button className="py-2 px-2 text-white text-xl font-medium rounded-full bg-gradient-to-r from-cyan-700 to-cyan-500 ">
                             <FaRegUserCircle />
                         </button>
                     </Link>

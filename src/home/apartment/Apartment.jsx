@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Apartment = () => {
 
@@ -49,15 +50,31 @@ const pageNumbers = [...Array(totalPages).keys()];
       status: "pending"
     };
 
-    // fetch("https://your-api.com/agreements", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(agreementData)
-    // })
-    // .then((res) => res.json())
-    // .then((data) => {
-    //   alert("Agreement submitted successfully!");
-    // });
+    fetch('http://localhost:5000/apartment', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+
+        body: JSON.stringify(agreementData)
+    })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if (data.insertedId) {
+                Swal.fire({
+                    title: 'Success',
+                    text: 'Agreement made successfully',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                })
+                form.reset()
+            }
+
+        })
+        .catch(error => {
+            console.error("catch error:", error);
+        });
 
 
   };
@@ -88,21 +105,24 @@ const pageNumbers = [...Array(totalPages).keys()];
           onChange={(e) => setMaxRent(e.target.value)} 
           className="border p-2 rounded"
         />
-        <button onClick={handleFilter} className="bg-cyan-700 text-white px-4 py-2 rounded">Search</button>
+        <button onClick={handleFilter} className="bg-gradient-to-r from-cyan-700 to-cyan-500 text-white px-4 py-2 rounded">Search</button>
       </div>
 
 {/* card */}
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {currentApartments.map((apartment) => (
           <div key={apartment.id} className="border p-4 rounded-lg shadow-md">
-            <img src={apartment.image} alt="Apartment" className="w-full h-40 object-cover rounded-lg mb-2" />
-            <p><strong>Floor:</strong> {apartment.floor_no}</p>
-            <p><strong>Block:</strong> {apartment.block_name}</p>
-            <p><strong>Apartment No:</strong> {apartment.apartment_no}</p>
-            <p><strong>Rent:</strong> {apartment.rent} Tk</p>
+            <img src={apartment.image} alt="" className="w-full h-48 object-cover rounded-lg mb-2" />
+            <p className='font-bold text-lg mb-1'>Floor: <span className='text-md text-gray-500 font-medium'> {apartment.floor_no}</span></p>
+
+            <p className='font-bold text-lg mb-1'>Block: <span className='text-md text-gray-500 font-medium'>{apartment.block_name}</span></p>
+
+            <p className='font-bold text-lg mb-1'>Apartment No: <span className='text-md text-gray-500 font-medium'>{apartment.apartment_no}</span> </p>
+            
+            <p className='font-bold text-lg mb-1'>Rent: <span className='text-md text-gray-500 font-medium'>{apartment.rent}</span> Tk</p>
             <button 
              onClick={() => handleAgreement(apartment)}
-              className="mt-2 bg-green-600 text-white px-4 py-2 rounded w-full"
+              className="mt-2 bg-gradient-to-r from-cyan-700 to-cyan-500 text-white px-4 py-2 rounded w-full"
             >
               Agreement
             </button>
@@ -114,17 +134,18 @@ const pageNumbers = [...Array(totalPages).keys()];
 
 {/* pagination */}
 
-<div className="mt-4 flex justify-center gap-2">
+<div className="mt-16 mb-8 flex justify-center gap-2">
   {pageNumbers.map((num) => (
     <button
       key={num}
       onClick={() => setCurrentPage(num + 1)}
-      className={`px-3 py-1 ${currentPage === num + 1 ? "bg-green-700 text-white" : "bg-gray-200"}`}
+      className={`px-3 py-1 rounded-full ${currentPage === num + 1 ? "bg-gradient-to-r from-cyan-700 to-cyan-500 text-white" : "bg-gray-200"}`}
     >
       {num + 1}
     </button>
   ))}
 </div>
+
 
         </div>
     );

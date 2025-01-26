@@ -1,5 +1,4 @@
 import Banner from "./Banner";
-import Footer from "./Footer";
 import LocationSection from "./locationSection";
 
 const Home = () => {
@@ -7,7 +6,6 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <LocationSection></LocationSection>
-            <Footer></Footer>
         </div>
     );
 };
