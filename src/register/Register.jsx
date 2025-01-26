@@ -8,11 +8,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../provider/AuthProvider";
 import auth from "../firebase/firebase.init";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 
 const Register = () => {
 
-  
+  const axiosPublic = useAxiosPublic()
   const { CreateUser,UpdateUser  } = useContext(AuthContext)
   const [registerError, setRegisterError] = useState('')
   const [showPassword, setShowPassword] = useState(false)
@@ -57,8 +58,26 @@ const Register = () => {
 
     CreateUser(email, password)
       .then(result => {
-        console.log(result.user)
-        toast.success('User Created Successfully')
+        const user= result.user
+        console.log(user)
+        UpdateUser(name, photoURL)
+        .then(() => {
+             
+          const userInfo = {
+              name : name,
+              email : email
+          }
+         axiosPublic.post('/user', userInfo)
+         .then(res => {
+          if (res.data.insertedId){
+              console.log('user added to ')
+              toast.success('User Created Successfully')
+          }
+         })
+         
+
+      });
+      navigate('/');
        
         setTimeout(()=> {
           navigate(location?.state ? location.state : '/')
@@ -71,10 +90,7 @@ const Register = () => {
         console.error(error)
         // alert('Email already existed')
       })
-      .then(result => {
-        
-        return UpdateUser(name, photoURL)
-      })
+      
 
   }
 

@@ -5,11 +5,12 @@ import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF, FaGithub } from "react-icons/fa";
 import { AuthContext } from "../provider/AuthProvider";
 import auth from "../firebase/firebase.init";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 
 
 const Login = () => {
-
+  const axiosPublic = useAxiosPublic()
   const { signIn } = useContext(AuthContext)
   const provider = new GoogleAuthProvider
   const navigate = useNavigate()
@@ -19,9 +20,19 @@ const Login = () => {
 
   const handleGoogle = () => {
     signInWithPopup(auth, provider)
-      .then(result => {
-        navigate(location?.state ? location.state : '/')
-      })
+    .then(result =>{
+      console.log(result.user)
+      const userInfo ={
+          email: result.user?.email,
+          name: result.user?.displayName
+      }
+      axiosPublic.post('/users', userInfo)
+      .then(res => 
+          {
+              console.log(res.data)
+              navigate(location?.state? location.state : '/')
+          })
+   })
       .catch(error => {
         console.error(error.message)
       })

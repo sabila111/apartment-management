@@ -10,6 +10,7 @@ import Apartment from "../home/apartment/Apartment";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import MyProfile from "../pages/Dashboard/userDashboard/MyProfile";
+import MemberProfile from "../pages/Dashboard/memberDashboard/MemberProfile";
 
   const router = createBrowserRouter([
     {
@@ -46,6 +47,10 @@ import MyProfile from "../pages/Dashboard/userDashboard/MyProfile";
         {
           path: "userProfile",
           element:<MyProfile></MyProfile> ,
+        },
+        {
+          path: "memberProfile",
+          element:<MemberProfile></MemberProfile> ,
         },
       ]
     }
