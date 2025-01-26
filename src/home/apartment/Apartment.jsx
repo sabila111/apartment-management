@@ -47,7 +47,8 @@ const pageNumbers = [...Array(totalPages).keys()];
       block: apartment.block_name,
       apartment_no: apartment.apartment_no,
       rent: apartment.rent,
-      status: "pending"
+      status: "pending",
+      agreementDate: new Date().toISOString().split("T")[0]
     };
 
     fetch('http://localhost:5000/apartment', {
