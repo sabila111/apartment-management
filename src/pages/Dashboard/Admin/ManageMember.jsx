@@ -23,25 +23,27 @@ const ManageMembers = () => {
     });
 
     const handleRemoveMember = (id) => {
-        fetch(`http://localhost:5000/members/${id}`, {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ role: "user" }),
-        })
-            .then((res) => res.json())
-            .then((data) => {
+        axiosSecure.patch(`/members/${id}`, { role: "user" })
+            .then((response) => {
+                const data = response.data;
                 if (data.modifiedCount > 0) {
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
-                        title: 'you have become a user',
+                        title: 'You have become a user',
                         showConfirmButton: false,
                         timer: 1500
-                      });
+                    });
                     setMembers(members.filter((member) => member._id !== id));
                 }
+            })
+            .catch((error) => {
+                // Handle error here
+                console.error("Error removing member:", error);
+                // You can show a Swal alert for error if necessary
             });
     };
+    
 
     const handleMakeAdmin = (id) => {
         fetch(`http://localhost:5000/user/admin/${id}`, {
@@ -59,7 +61,7 @@ const ManageMembers = () => {
                         timer: 1500
                     });
     
-                    refetch(); // Refresh the users list
+                    refetch();
                 }
             });
     };
