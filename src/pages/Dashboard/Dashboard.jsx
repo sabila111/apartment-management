@@ -6,9 +6,10 @@ import { IoPeople } from 'react-icons/io5';
 import { RiCoupon2Fill } from 'react-icons/ri';
 import { TfiAnnouncement } from 'react-icons/tfi';
 import {  NavLink, Outlet } from 'react-router-dom';
+import useAdmin from '../../hooks/useAdmin';
 
 const Dashboard = () => {
-    const isAdmin = true 
+    const [isAdmin] = useAdmin() 
     return (
         <div className="flex gap-7">
             <div className="w-64 min-h-screen bg-gradient-to-r from-cyan-700 to-cyan-500">
