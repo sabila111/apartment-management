@@ -58,6 +58,11 @@ import Announcement from "../pages/Dashboard/userDashboard/Announcement";
           loader: () => fetch('http://localhost:5000/announcement')
         }, 
         {
+          path: "memberAnnouncement",
+          element:<PrivateRoute><Announcement></Announcement></PrivateRoute> ,
+          loader: () => fetch('http://localhost:5000/announcement')
+        }, 
+        {
           path: "memberProfile",
           element:<MemberProfile></MemberProfile> ,
         },

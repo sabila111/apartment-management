@@ -7,7 +7,7 @@ const MemberProfile = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/apartment/${user.email}`)
+            fetch(`http://localhost:5000/members/${user.email}`)
                 .then((res) => res.json())
                 .then((data) => setAgreements(data));
         }
