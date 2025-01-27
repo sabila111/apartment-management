@@ -17,6 +17,7 @@ import AdminRoute from "../privateRoute/AdminRoute";
 import AdminAnnouncement from "../pages/Dashboard/Admin/AdminAnnouncement";
 import AdminAgreement from "../pages/Dashboard/Admin/AdminAgreement";
 import AdminCoupon from "../pages/Dashboard/Admin/AdminCoupon";
+import Announcement from "../pages/Dashboard/userDashboard/Announcement";
 
   const router = createBrowserRouter([
     {
@@ -51,6 +52,11 @@ import AdminCoupon from "../pages/Dashboard/Admin/AdminCoupon";
           path: "userProfile",
           element:<MyProfile></MyProfile> ,
         },
+        {
+          path: "announcement",
+          element:<Announcement></Announcement> ,
+          loader: () => fetch('http://localhost:5000/announcement')
+        }, 
         {
           path: "memberProfile",
           element:<MemberProfile></MemberProfile> ,
