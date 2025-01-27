@@ -49,7 +49,7 @@ const pageNumbers = [...Array(totalPages).keys()];
       rent: apartment.rent,
       status: "pending",
       agreementDate: new Date().toISOString().split("T")[0],
-      role: 'member'
+      role: 'user'
     };
 
     fetch('http://localhost:5000/apartment', {
