@@ -11,6 +11,8 @@ import Dashboard from "../pages/Dashboard/Dashboard";
 import PrivateRoute from "../privateRoute/PrivateRoute";
 import MyProfile from "../pages/Dashboard/userDashboard/MyProfile";
 import MemberProfile from "../pages/Dashboard/memberDashboard/MemberProfile";
+import AdminProfile from "../pages/Dashboard/Admin/AdminProfile";
+import ManageMember from "../pages/Dashboard/Admin/ManageMember";
 
   const router = createBrowserRouter([
     {
@@ -40,10 +42,7 @@ import MemberProfile from "../pages/Dashboard/memberDashboard/MemberProfile";
       path:'dashboard',
       element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
       children:[
-        {
-          index: true, 
-          element: <MyProfile />,
-        },
+       
         {
           path: "userProfile",
           element:<MyProfile></MyProfile> ,
@@ -51,6 +50,14 @@ import MemberProfile from "../pages/Dashboard/memberDashboard/MemberProfile";
         {
           path: "memberProfile",
           element:<MemberProfile></MemberProfile> ,
+        },
+        {
+          path: "adminProfile",
+          element:<AdminProfile></AdminProfile> ,
+        },
+        {
+          path: "manageMember",
+          element:<ManageMember></ManageMember> ,
         },
       ]
     }

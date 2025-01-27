@@ -17,7 +17,7 @@ const Apartment = () => {
 const pageNumbers = [...Array(totalPages).keys()];
 
   useEffect(() => {
-    fetch("/fake.json") 
+    fetch("http://localhost:5000/apartments") 
       .then((res) => res.json())
       .then((data) => {
         setApartments(data);
@@ -48,7 +48,8 @@ const pageNumbers = [...Array(totalPages).keys()];
       apartment_no: apartment.apartment_no,
       rent: apartment.rent,
       status: "pending",
-      agreementDate: new Date().toISOString().split("T")[0]
+      agreementDate: new Date().toISOString().split("T")[0],
+      role: 'member'
     };
 
     fetch('http://localhost:5000/apartment', {
@@ -112,7 +113,7 @@ const pageNumbers = [...Array(totalPages).keys()];
 {/* card */}
              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {currentApartments.map((apartment) => (
-          <div key={apartment.id} className="border p-4 rounded-lg shadow-md">
+          <div key={apartment._id} className="border p-4 rounded-lg shadow-md">
             <img src={apartment.image} alt="" className="w-full h-48 object-cover rounded-lg mb-2" />
             <p className='font-bold text-lg mb-1'>Floor: <span className='text-md text-gray-500 font-medium'> {apartment.floor_no}</span></p>
 
