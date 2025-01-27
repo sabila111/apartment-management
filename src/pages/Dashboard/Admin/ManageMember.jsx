@@ -68,7 +68,7 @@ const ManageMembers = () => {
     return (
         <div className="p-6 max-w-4xl mx-auto bg-white ">
            <div className="flex justify-evenly my-4">
-                <h2 className="text-3xl text-cyan-800 font-bold mt-5">All Users</h2>
+                <h2 className="text-3xl text-cyan-800 font-bold mt-5 mb-10">All Members</h2>
             </div>
 
             <div className="overflow-x-auto">

@@ -16,6 +16,7 @@ import ManageMember from "../pages/Dashboard/Admin/ManageMember";
 import AdminRoute from "../privateRoute/AdminRoute";
 import AdminAnnouncement from "../pages/Dashboard/Admin/AdminAnnouncement";
 import AdminAgreement from "../pages/Dashboard/Admin/AdminAgreement";
+import AdminCoupon from "../pages/Dashboard/Admin/AdminCoupon";
 
   const router = createBrowserRouter([
     {
@@ -70,6 +71,11 @@ import AdminAgreement from "../pages/Dashboard/Admin/AdminAgreement";
           path: "agreementRequests",
           element:<AdminRoute><AdminAgreement></AdminAgreement></AdminRoute> ,
           loader: () => fetch('http://localhost:5000/apartment')
+        },
+        {
+          path: "manageCoupons",
+          element:<AdminRoute><AdminCoupon></AdminCoupon></AdminRoute> ,
+          loader: () => fetch('http://localhost:5000/coupon')
         },
       ]
     }

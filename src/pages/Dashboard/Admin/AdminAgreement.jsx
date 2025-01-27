@@ -38,8 +38,8 @@ const AdminAgreement = () => {
 
    
     return (
-        <div >
-
+        <div  className='mt-14'>
+<h2 className='text-4xl text-center text-cyan-800 font-bold pb-20'>All Agreement Requests </h2>
          <div className="overflow-x-auto">
                 <table className="table table-zebra w-full">
                     {/* head */}
@@ -53,7 +53,7 @@ const AdminAgreement = () => {
                             <th>Room</th>
                             <th>Rent</th>
                             <th>Date</th>
-                            <th>button</th>
+                            <th className='text-center'>button</th>
                         </tr>
                     </thead>
                     <tbody>

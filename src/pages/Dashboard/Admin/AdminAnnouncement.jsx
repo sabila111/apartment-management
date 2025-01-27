@@ -41,7 +41,7 @@ const AdminAnnouncement = () => {
 
     return (
         <div className="p-6 max-w-4xl mx-auto bg-white rounded-lg shadow mt-12">
-            <h2 className="text-4xl font-bold mb-5 text-center">Make an Announcement</h2>
+            <h2 className="text-4xl font-bold mb-5 text-center text-cyan-800">Make an Announcement</h2>
              <form onSubmit={handleSubmit} className="mb-6">
                 <div className="mb-4">
                     <label htmlFor="title" className="block font-medium mb-1">
