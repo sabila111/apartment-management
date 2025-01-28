@@ -16,7 +16,7 @@ const AddCouponModal = ({ isOpen, onClose, onCouponAdded }) => {
             createdAt: new Date().toISOString().split("T")[0],
         };
 
-        fetch("http://localhost:5000/coupon", {
+        fetch("https://12-assignment-server-smoky.vercel.app/coupon", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

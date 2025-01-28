@@ -57,12 +57,12 @@ import MakePayment from "../pages/Dashboard/memberDashboard/Payment/MakePayment"
         {
           path: "announcement",
           element:<Announcement></Announcement> ,
-          loader: () => fetch('http://localhost:5000/announcement')
+          loader: () => fetch('https://12-assignment-server-smoky.vercel.app/announcement')
         }, 
         {
           path: "memberAnnouncement",
           element:<PrivateRoute><Announcement></Announcement></PrivateRoute> ,
-          loader: () => fetch('http://localhost:5000/announcement')
+          loader: () => fetch('https://12-assignment-server-smoky.vercel.app/announcement')
         }, 
         {
           path: "memberProfile",
@@ -91,12 +91,12 @@ import MakePayment from "../pages/Dashboard/memberDashboard/Payment/MakePayment"
         {
           path: "agreementRequests",
           element:<AdminRoute><AdminAgreement></AdminAgreement></AdminRoute> ,
-          loader: () => fetch('http://localhost:5000/apartment')
+          loader: () => fetch('https://12-assignment-server-smoky.vercel.app/apartment')
         },
         {
           path: "manageCoupons",
           element:<AdminRoute><AdminCoupon></AdminCoupon></AdminRoute> ,
-          loader: () => fetch('http://localhost:5000/coupon')
+          loader: () => fetch('https://12-assignment-server-smoky.vercel.app/coupon')
         },
       ]
     }

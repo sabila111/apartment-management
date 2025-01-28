@@ -9,7 +9,7 @@ const useMember = () => {
 
     useEffect(() => {
         if (user?.email) {
-            fetch(`http://localhost:5000/apartment/members/${user.email}`)
+            fetch(`https://12-assignment-server-smoky.vercel.app/apartment/members/${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     setIsMember(data?.isMember || false);

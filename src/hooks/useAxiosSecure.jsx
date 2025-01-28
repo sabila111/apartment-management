@@ -7,7 +7,7 @@ import { AuthContext } from "../provider/AuthProvider";
 
 
 const axiosSecure = axios.create({
-    baseURL: 'http://localhost:5000'
+    baseURL: 'https://12-assignment-server-smoky.vercel.app'
 })
 const useAxiosSecure = () => {
     const navigate = useNavigate();

@@ -7,7 +7,7 @@ const MemberProfile = () => {
 
     useEffect(() => {
         if (user) {
-            fetch(`http://localhost:5000/members/${user.email}`)
+            fetch(`https://12-assignment-server-smoky.vercel.app/members/${user.email}`)
                 .then((res) => res.json())
                 .then((data) => {
                     console.log("Received data:", data);

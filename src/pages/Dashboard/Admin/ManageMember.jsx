@@ -8,7 +8,7 @@ const ManageMembers = () => {
     const axiosSecure = useAxiosSecure();
     
     useEffect(() => {
-        fetch("http://localhost:5000/members")
+        fetch("https://12-assignment-server-smoky.vercel.app/members")
             .then((res) => res.json())
             .then((data) => setMembers(data));
     }, []);
@@ -46,7 +46,7 @@ const ManageMembers = () => {
     
 
     // const handleMakeAdmin = (id) => {
-    //     fetch(`http://localhost:5000/user/admin/${id}`, {
+    //     fetch(`https://12-assignment-server-smoky.vercel.app/user/admin/${id}`, {
     //         method: "PATCH",
     //         headers: { "Content-Type": "application/json" },
     //     })

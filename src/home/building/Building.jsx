@@ -7,7 +7,7 @@ const Building = () => {
     useEffect(() => {
         const fetchApartments = async () => {
           try {
-            const response = await fetch('http://localhost:5000/apartments');
+            const response = await fetch('https://12-assignment-server-smoky.vercel.app/apartments');
             
             
             if (!response.ok) {
@@ -61,7 +61,7 @@ const Building = () => {
                 </div>
       
                 <button
-                  onClick={() => handleAgreement(apartment)}
+                 
                   className="mt-6 bg-gradient-to-r from-cyan-700 to-cyan-500 text-white text-lg font-semibold px-6 py-3 rounded-lg w-full transition-all duration-300 hover:shadow-xl hover:scale-105 tracking-wide uppercase"
                 >
                   Agreement

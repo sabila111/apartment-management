@@ -17,7 +17,7 @@ const Apartment = () => {
 const pageNumbers = [...Array(totalPages).keys()];
 
   useEffect(() => {
-    fetch("http://localhost:5000/apartments") 
+    fetch("https://12-assignment-server-smoky.vercel.app/apartments") 
       .then((res) => res.json())
       .then((data) => {
         setApartments(data);
@@ -52,7 +52,7 @@ const pageNumbers = [...Array(totalPages).keys()];
       role: 'user'
     };
 
-    fetch('http://localhost:5000/apartment', {
+    fetch('https://12-assignment-server-smoky.vercel.app/apartment', {
         method: 'POST',
         headers: {
             'content-type': 'application/json'

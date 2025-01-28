@@ -50,7 +50,7 @@ const AdminCoupon = () => {
                 </table>
 
 
-                <div className='w-60 mx-auto mt-20'>
+                <div className='w-60 mx-auto mt-20 mb-10'>
                     <button onClick={() => setIsModalOpen(true)} className='px-4 py-3 rounded-lg bg-gradient-to-r from-cyan-700 to-cyan-500 text-white font-bold'>Add Coupons</button>
 
                 </div>

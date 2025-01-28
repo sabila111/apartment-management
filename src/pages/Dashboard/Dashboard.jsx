@@ -15,12 +15,12 @@ const Dashboard = () => {
     const [isAdmin] = useAdmin() 
     // const isMember = useMember()
     return (
-        <div className="flex">
+        <div className="flex h-screen">
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gradient-to-r from-cyan-700 to-cyan-500 p-5 transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 h-full bg-gradient-to-r from-cyan-700 to-cyan-500 p-3 transition-transform duration-300 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:relative md:translate-x-0 w-64 md:min-h-screen`}
+        }  md:relative md:translate-x-0 w-64 md:min-h-screen lg:min-h-screen`}
       >
         {/* Close Button (for mobile) */}
         <button
@@ -93,7 +93,7 @@ const Dashboard = () => {
       </div>
 
       {/* Content Area */}
-      <div className="flex-1 p-5 md:pl-64">
+      <div className="flex-1 p-5  md:px-20 ">
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}

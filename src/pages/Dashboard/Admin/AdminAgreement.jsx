@@ -10,7 +10,7 @@ const AdminAgreement = () => {
     const [agreements, setAgreements] = useState(initialAgreements);
    
     const handleAction = (id, action) => {
-        fetch(`http://localhost:5000/apartment/${id}`, {
+        fetch(`https://12-assignment-server-smoky.vercel.app/apartment/${id}`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"

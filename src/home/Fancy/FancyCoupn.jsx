@@ -5,7 +5,7 @@ const FancyCoupn = () => {
     const [coupons, setCoupons] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/coupon")
+        fetch("https://12-assignment-server-smoky.vercel.app/coupon")
           .then((res) => res.json()) 
           .then((data) => setCoupons(data.slice(0, 6))) 
           .catch((err) => console.error("Error fetching coupons:", err));

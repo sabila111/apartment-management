@@ -11,7 +11,7 @@ const AdminAnnouncement = () => {
         const description = form.description.value
         const addAnnouncement = {title, description}
 
-        fetch('http://localhost:5000/announcement', {
+        fetch('https://12-assignment-server-smoky.vercel.app/announcement', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
