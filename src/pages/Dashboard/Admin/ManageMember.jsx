@@ -38,9 +38,9 @@ const ManageMembers = () => {
                 }
             })
             .catch((error) => {
-                // Handle error here
+               
                 console.error("Error removing member:", error);
-                // You can show a Swal alert for error if necessary
+               
             });
     };
     

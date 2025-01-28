@@ -9,13 +9,25 @@ const MemberProfile = () => {
         if (user) {
             fetch(`http://localhost:5000/members/${user.email}`)
                 .then((res) => res.json())
-                .then((data) => setAgreements(data));
+                .then((data) => {
+                    console.log("Received data:", data);
+                    
+                    if (Array.isArray(data)) {
+                        setAgreements(data);
+                    } else if (data && typeof data === "object") {
+                        setAgreements([data]); 
+                    } else {
+                        setAgreements([]);
+                    }
+                })
+                .catch((error) => console.error("Fetch error:", error));
         }
     }, [user]);
+    
 
     return (
         <div className="p-6 max-w-4xl mx-auto bg-white rounded-xl shadow-md">
-            <h2 className="text-center text-2xl font-bold mb-4">Member Profile</h2>
+            <h2 className="text-center text-4xl font-bold my-10">Member Profile</h2>
 
             <div className="text-center mb-4">
                 <img className="h-20 w-20 rounded-full mx-auto" src={user.photoURL || "default-avatar.jpg"} alt="User Avatar" />
@@ -23,7 +35,7 @@ const MemberProfile = () => {
                 <p className="text-gray-600">{user.email}</p>
             </div>
 
-            <h3 className="text-lg font-semibold mb-2">Agreement Details</h3>
+            <h3 className="text-lg font-semibold mb-2">Agreement Details : </h3>
             {agreements.length > 0 ? (
                 <table className="w-full border-collapse border border-gray-300">
                     <thead>
@@ -42,7 +54,7 @@ const MemberProfile = () => {
                                 <td className="border p-2">{agree.agreementDate}</td>
                                 <td className="border p-2">{agree.floor}</td>
                                 <td className="border p-2">{agree.block}</td>
-                                <td className="border p-2">{agree.apartmentNo}</td>
+                                <td className="border p-2">{agree.apartment_no}</td>
                                 <td className="border p-2">{agree.rent}</td>
                                 <td className="border p-2">{agree.status}</td>
                             </tr>

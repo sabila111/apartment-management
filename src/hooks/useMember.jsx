@@ -1,25 +1,28 @@
-import { useQuery } from "@tanstack/react-query";
-import { useContext } from "react";
-import { AuthContext } from "../provider/AuthProvider";
-import useAxiosSecure from "./useAxiosSecure";
+import { useContext, useEffect, useState } from 'react';
 
+import { AuthContext } from '../provider/AuthProvider';
 
 const useMember = () => {
-    const { user, loading } = useContext(AuthContext); // Get `loading` from AuthProvider
-    const axiosSecure = useAxiosSecure();
+    const { user } = useContext(AuthContext);
+    const [isMember, setIsMember] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-    const { data: isMember = false, isPending: isMemberLoading } = useQuery({
-        queryKey: [user?.email, 'isMember'],
-        queryFn: async () => {
-            if (!user?.email) return false; // Ensure `user.email` exists before calling API
-            const res = await axiosSecure.get(`/apartment/member/${user.email}`);
-            console.log("Member Status:", res.data);
-            return res.data?.member ?? false; // Ensures a default value
-        },
-        enabled: !!user?.email && !loading // Prevent API call if user is not ready
-    });
+    useEffect(() => {
+        if (user?.email) {
+            fetch(`http://localhost:5000/apartment/members/${user.email}`)
+                .then((res) => res.json())
+                .then((data) => {
+                    setIsMember(data?.isMember || false);
+                    setLoading(false);
+                })
+                .catch((error) => {
+                    console.error('Error fetching member status:', error);
+                    setLoading(false);
+                });
+        }
+    }, [user]);
 
-    return [isMember, isMemberLoading];
+    return [isMember, loading];
 };
 
 export default useMember;
