@@ -14,13 +14,13 @@ const ManageMembers = () => {
     }, []);
 
 
-    const { data: users = [], refetch } = useQuery({
-        queryKey: ["user"],
-        queryFn: async () => {
-            const res = await axiosSecure.get("/user");
-            return res.data;
-        }
-    });
+    // const { data: users = [], refetch } = useQuery({
+    //     queryKey: ["user"],
+    //     queryFn: async () => {
+    //         const res = await axiosSecure.get("/user");
+    //         return res.data;
+    //     }
+    // });
 
     const handleRemoveMember = (id) => {
         axiosSecure.patch(`/members/${id}`, { role: "user" })
@@ -45,26 +45,26 @@ const ManageMembers = () => {
     };
     
 
-    const handleMakeAdmin = (id) => {
-        fetch(`http://localhost:5000/user/admin/${id}`, {
-            method: "PATCH",
-            headers: { "Content-Type": "application/json" },
-        })
-            .then((res) => res.json())
-            .then((data) => {
-                if (data.modifiedCount > 0) {
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: "User is now an Admin!",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
+    // const handleMakeAdmin = (id) => {
+    //     fetch(`http://localhost:5000/user/admin/${id}`, {
+    //         method: "PATCH",
+    //         headers: { "Content-Type": "application/json" },
+    //     })
+    //         .then((res) => res.json())
+    //         .then((data) => {
+    //             if (data.modifiedCount > 0) {
+    //                 Swal.fire({
+    //                     position: "top-end",
+    //                     icon: "success",
+    //                     title: "User is now an Admin!",
+    //                     showConfirmButton: false,
+    //                     timer: 1500
+    //                 });
     
-                    refetch();
-                }
-            });
-    };
+    //                 refetch();
+    //             }
+    //         });
+    // };
 
 
     return (
@@ -110,31 +110,6 @@ const ManageMembers = () => {
                         )}
                     </tbody>
                 </table>
-
-                <tbody>
-    {users.length > 0 ? (
-        users.map((user, index) => (
-            <tr key={user._id}>
-                <td>{index + 1}</td>
-                <td>{user.name}</td>
-                <td>{user.email}</td>
-                <td>
-                                    { user.role === 'admin' ? 'Admin' : <button
-                                        onClick={() => handleMakeAdmin(user._id)}
-                                        className="btn text-white bg-blue-900">
-                                        Make Admin
-                                    </button>}
-                                </td>
-            </tr>
-        ))
-    ) : (
-        <tr>
-            <td colSpan="4" className="text-center p-4">
-                No Users Found
-            </td>
-        </tr>
-    )}
-</tbody>
 
             </div>
         </div>

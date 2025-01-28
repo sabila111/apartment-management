@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../../provider/AuthProvider';
 import { Link, useNavigate } from 'react-router-dom';
-
+import { ToastContainer, toast } from 'react-toastify';
 const Payment = () => {
 
      const { user } = useContext(AuthContext);
@@ -31,7 +31,7 @@ const Payment = () => {
             event.preventDefault();
         
             if (!selectedMonth) {
-              alert("Please select a month to proceed with the payment.");
+                toast.error('Please select month')
               return;
             }
        
@@ -152,6 +152,9 @@ const Payment = () => {
                 <input type="submit" value="Pay" className="btn btn-block bg-gradient-to-r from-cyan-700 to-cyan-500 text-white mt-6 " />
                 
             </form>
+
+
+            <ToastContainer />
         </div>
     );
 };

@@ -19,15 +19,15 @@ const MakePayment = () => {
     const applyCoupon = async () => {
         try {
           const { data } = await axiosSecure.post('/coupon', { couponCode });
-          setDiscount(data.discount); // Update the discount percentage
-          setError(''); // Clear any previous errors
+          setDiscount(data.discount);  
+          setError(''); 
     
-          // Update the rent price based on the discount
+          
           const discountedPrice = rentPrice * (1 - data.discount / 100);
           setRentPrice(discountedPrice);
         } catch (err) {
-          setError('Invalid coupon code.'); // Handle invalid coupon
-          setDiscount(0); // Reset discount if the coupon is invalid
+          setError('Invalid coupon code.'); 
+          setDiscount(0);  
         }
       };
     
@@ -50,7 +50,7 @@ const MakePayment = () => {
             className="input input-bordered w-full"
             placeholder="Enter coupon code"
             value={couponCode}
-            onChange={(e) => setCouponCode(e.target.value)}
+            onChange={(e) => setCouponCode()}
           />
           <button
             className="btn ml-2"

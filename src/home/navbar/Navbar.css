@@ -6,7 +6,7 @@
   }
 
   .menu-horizontal li a:hover {
-    color: rgb(99 102 241);
+    color: rgb(14, 116, 144);
    
   }
   .menu-horizontal li a:hover::after,
@@ -17,11 +17,11 @@
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background-color: rgb(99 102 241);
+    background-color: rgb(14, 116, 144);
   }
 
   .menu-horizontal li a.active {
-    color: rgb(99 102 241);
+    color: rgb(14, 116, 144);
     
   }
 

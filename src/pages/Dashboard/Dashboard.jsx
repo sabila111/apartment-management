@@ -16,6 +16,8 @@ const Dashboard = () => {
     return (
         <div className="flex gap-7">
             <div className="w-64 min-h-screen bg-gradient-to-r from-cyan-700 to-cyan-500">
+
+                
                 {/* user */}
                 <ul className="menu p-5">
                     {
@@ -56,7 +58,7 @@ const Dashboard = () => {
                     
                         <>
                         <li className="text-white font-bold text-lg">
-                        <NavLink to={'/dashboard/memberProfile'}><CgProfile /> My Profile</NavLink>
+                        <NavLink to={'/dashboard/memberProfile'}><CgProfile /> Member Profile</NavLink>
                         </li>
 
                     <li className="text-white font-bold text-lg">
@@ -68,23 +70,16 @@ const Dashboard = () => {
                         </li>
 
                         <li className="text-white font-bold text-lg">
-                        <NavLink to={'/dashboard/memberAnnouncement'}><TfiAnnouncement /> Announcement</NavLink>
+                        <NavLink to={'/dashboard/memberAnnouncement'}><TfiAnnouncement />Member Announcement</NavLink>
                         </li>
 
-                    <div className=" border-2 bg-white"></div>
-                    <li className="text-white font-bold text-lg mt-3">
-                        <NavLink to={'/'}>
-                            <FaHome></FaHome>
-                            Home
-                        </NavLink>
-
-                    </li>
+                    
                         <li className="text-white font-bold text-lg">
-                        <NavLink to={'/dashboard/userProfile'}><CgProfile /> My Profile</NavLink>
+                        <NavLink to={'/dashboard/userProfile'}><CgProfile /> My user Profile</NavLink>
                         </li>
 
                     <li className="text-white font-bold text-lg">
-                        <NavLink to={'/dashboard/announcement'}><TfiAnnouncement /> Announcement</NavLink>
+                        <NavLink to={'/dashboard/announcement'}><TfiAnnouncement />User Announcement</NavLink>
                         </li>
 
                     <div className=" border-2 bg-white"></div>
@@ -102,13 +97,7 @@ const Dashboard = () => {
                 </ul>
 
 
-            
-
-
-
-
-
-
+        
             </div>
 
 

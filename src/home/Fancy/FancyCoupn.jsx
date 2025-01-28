@@ -6,14 +6,14 @@ const FancyCoupn = () => {
 
     useEffect(() => {
         fetch("http://localhost:5000/coupon")
-          .then((res) => res.json()) // ✅ Ensure response is converted to JSON
-          .then((data) => setCoupons(data)) // ✅ Properly update state with fetched data
+          .then((res) => res.json()) 
+          .then((data) => setCoupons(data.slice(0, 6))) 
           .catch((err) => console.error("Error fetching coupons:", err));
       }, []);
     
     return (
         <div className="py-10 px-5 mt-8 ">
-        <h2 className="text-3xl  font-bold text-center mb-16">🔥 Exclusive Coupons 🔥</h2>
+        <h2 className="text-center text-4xl font-extrabold text-cyan-700 mb-14 tracking-wide uppercase drop-shadow-md">🔥 Exclusive Coupons 🔥</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {coupons.length > 0 ? (
           coupons.map((coupon, index) => (
