@@ -57,7 +57,7 @@ const Navbar = () => {
 
     return (
        <div className="fixed top-0 left-0 w-full z-[100] bg-gradient-to-r from-cyan-700 to-cyan-500 text-black dark:text-white bg-opacity-10 backdrop-blur-md">
-         <div className="navbar max-w-7xl mx-auto  py-4  text-black  relative z-[20]">
+         <div className="navbar  max-w-7xl mx-auto  py-4  text-black  relative z-[20]">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
