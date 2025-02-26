@@ -1,5 +1,6 @@
 import daisyui from "daisyui"
 export default {
+  darkMode: 'class',
   content: [
     './index.html', 
     './src/**/*.{js,jsx,ts,tsx}', // Include React files
@@ -11,7 +12,6 @@ export default {
     daisyui, // Add DaisyUI as a plugin
   ],
   daisyui: {
-    themes: ["light", "dark", "cupcake"], // Customize DaisyUI themes (optional)
-    darkTheme: "dark", // Default dark theme
+    themes: false, // Disable DaisyUI themes
   },
 }

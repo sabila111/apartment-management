@@ -1,12 +1,12 @@
 
 .menu-horizontal li a {
     position: relative;
-    color: black;
+    color: white;
     text-decoration: none;
   }
 
   .menu-horizontal li a:hover {
-    color: rgb(14, 116, 144);
+    color: black;
    
   }
   .menu-horizontal li a:hover::after,
@@ -17,11 +17,11 @@
     bottom: -2px;
     width: 100%;
     height: 2px;
-    background-color: rgb(14, 116, 144);
+    background-color: black;
   }
 
   .menu-horizontal li a.active {
-    color: rgb(14, 116, 144);
+    color: black;
     
   }
 
