@@ -1,0 +1,38 @@
+[
+    {
+      
+      "image": "https://i.ibb.co.com/abc123/building1.jpg",
+      "title": "Luxury Heights",
+      "description": "A modern high-rise with stunning views and top-tier amenities."
+    },
+    {
+    
+      "image": "https://i.ibb.co.com/def456/building2.jpg",
+      "title": "Urban Oasis",
+      "description": "A serene apartment complex in the heart of the city."
+    },
+    {
+      
+      "image": "https://i.ibb.co.com/ghi789/building3.jpg",
+      "title": "Skyline Towers",
+      "description": "Elegant living spaces with panoramic city views."
+    },
+    {
+      
+      "image": "https://i.ibb.co.com/jkl012/building4.jpg",
+      "title": "Green Valley",
+      "description": "Eco-friendly apartments surrounded by nature."
+    },
+    {
+      
+      "image": "https://i.ibb.co.com/mno345/building5.jpg",
+      "title": "Golden Residences",
+      "description": "Luxurious apartments with premium finishes."
+    },
+    {
+      
+      "image": "https://i.ibb.co.com/pqr678/building6.jpg",
+      "title": "Ocean Breeze",
+      "description": "Beachfront living with modern comforts."
+    }
+  ]

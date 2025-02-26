@@ -25,7 +25,7 @@ const Building = () => {
 
 
     return (
-        <div className="py-16 bg-gray-50">
+        <div className="py-16 ">
         <div className="container mx-auto px-6">
           <h2 className="text-center text-4xl font-extrabold text-cyan-700 mb-14 tracking-wide uppercase drop-shadow-md">
             About the Building

@@ -17,7 +17,7 @@ const Banner = () => {
             slidesPerView={1}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             pagination={{ clickable: true }}
-            className="w-full h-[420px] mt-10"
+            className="w-full h-[420px] mt-[88px]"
         >
             {slides.map(slide => (
                 <SwiperSlide key={slide.id} className="relative">

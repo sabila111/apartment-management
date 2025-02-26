@@ -86,7 +86,7 @@ const pageNumbers = [...Array(totalPages).keys()];
   const currentApartments = filteredApartments.slice(indexOfFirstApartment, indexOfLastApartment);
 
     return (
-        <div className='mt-28 dark:bg-gray-900  dark:text-white'>
+        <div className='mt-32 dark:bg-gray-900  dark:text-white'>
 
              <h1 className="text-4xl font-bold text-center mt-4 mb-12 ">Available Apartments</h1>
 
