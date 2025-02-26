@@ -54,6 +54,8 @@ const AdminProfile = () => {
           <img className="w-32 h-32 rounded-full" src={user.photoURL} alt="Admin" />
           <h2 className="text-2xl font-bold mt-3">{admin.name}</h2>
           <p className="text-gray-600">{admin.email}</p>
+          <p className="text-gray-600">Number: 01734548993</p>
+          <p className="text-gray-600">Address: Dhaka,Bangladesh</p>
 
           <div className="mt-6 grid grid-cols-2 gap-4">
             <div className="bg-blue-200 p-4 rounded-lg">

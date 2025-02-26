@@ -14,6 +14,8 @@ const MyProfile = () => {
                 />
                 <h2 className="text-xl font-semibold mt-4">{user?.displayName}</h2>
                 <p className="text-gray-600">{user?.email}</p>
+                <p className="text-gray-600">Number: 01734548993</p>
+                <p className="text-gray-600">Address: Dhaka,Bangladesh</p>
             </div>
 
             <div className="mt-6">

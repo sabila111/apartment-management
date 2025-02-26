@@ -51,6 +51,7 @@ const Navbar = () => {
     const links = <>
         <li><NavLink to='/'>Home</NavLink></li>
         <li><NavLink to='/apartment' >Apartment</NavLink></li>
+        <li><NavLink to='/contact' >Contact Us</NavLink></li>
 
     </>
 
@@ -112,6 +113,7 @@ const Navbar = () => {
                                     <div className="absolute right-0 mt-2 w-48 bg-white shadow-md rounded-lg p-3 z-[100]">
                                         <span className="block text-center text-sm font-medium text-gray-700">{user.displayName}</span>
                                         <Link to="/dashboard" className="block text-center px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard</Link>
+                                        <Link to="/guide" className="block text-center px-4 py-2 text-gray-700 hover:bg-gray-100">User Guide</Link>
                                         <button
                                             onClick={handleSignOut}
                                             className="w-full px-4 py-2 mt-2 bg-gradient-to-r from-cyan-700 to-cyan-500 text-white rounded hover:bg-gradient-to-r from-cyan-700 to-cyan-500"

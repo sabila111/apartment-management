@@ -20,6 +20,8 @@ import AdminCoupon from "../pages/Dashboard/Admin/AdminCoupon";
 import Announcement from "../pages/Dashboard/userDashboard/Announcement";
 import Payment from "../pages/Dashboard/memberDashboard/Payment/Payment";
 import MakePayment from "../pages/Dashboard/memberDashboard/Payment/MakePayment";
+import ContactUs from "../home/contact/ContactUs";
+import UserGuide from "../pages/userGuide/UserGuide";
 
   const router = createBrowserRouter([
     {
@@ -42,6 +44,14 @@ import MakePayment from "../pages/Dashboard/memberDashboard/Payment/MakePayment"
         {
           path: "/apartment",
           element: <Apartment></Apartment>,
+        },
+        {
+          path: "/contact",
+          element: <ContactUs></ContactUs>,
+        },
+        {
+          path: "/guide",
+          element: <UserGuide></UserGuide>,
         },
       ],
     },

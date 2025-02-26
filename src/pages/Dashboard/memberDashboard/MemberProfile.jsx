@@ -33,6 +33,8 @@ const MemberProfile = () => {
                 <img className="h-20 w-20 rounded-full mx-auto" src={user.photoURL || "default-avatar.jpg"} alt="User Avatar" />
                 <h3 className="text-xl font-semibold">{user.displayName}</h3>
                 <p className="text-gray-600">{user.email}</p>
+                <p className="text-gray-600">Number: 01734548993</p>
+                <p className="text-gray-600">Address: Dhaka,Bangladesh</p>
             </div>
 
             <h3 className="text-lg font-semibold mb-2">Agreement Details : </h3>
