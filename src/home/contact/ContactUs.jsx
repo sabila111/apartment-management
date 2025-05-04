@@ -7,7 +7,7 @@ const ContactUs = () => {
       <div className="lg:w-1/3 bg-gradient-to-r from-cyan-700 to-cyan-500 p-8 rounded-lg shadow-lg flex flex-col gap-6">
         <h2 className="text-3xl font-bold">Contact Us</h2>
         <p className="flex items-center gap-3"><FaMapMarkerAlt /> 123 Street, Dhaka City</p>
-        <p className="flex items-center gap-3"><FaEnvelope /> contact@example.com</p>
+        <p className="flex items-center gap-3"><FaEnvelope /> rapunzel1@gmail.com</p>
         <p className="flex items-center gap-3"><FaPhoneAlt /> +123 456 7890</p>
         
         <div className="flex gap-4 mt-4">

@@ -39,6 +39,11 @@ const Dashboard = () => {
                 </NavLink>
               </li>
               <li>
+                <NavLink to={"/dashboard/adminOverview"}>
+                  <CgProfile /> Admin Overview
+                </NavLink>
+              </li>
+              <li>
                 <NavLink to={"/dashboard/manageMember"}>
                   <IoPeople /> Manage Members
                 </NavLink>
@@ -64,6 +69,11 @@ const Dashboard = () => {
               <li>
                 <NavLink to={"/dashboard/memberProfile"}>
                   <CgProfile /> Member Profile
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to={"/dashboard/memberOverview"}>
+                  <CgProfile /> Overview
                 </NavLink>
               </li>
               <li>

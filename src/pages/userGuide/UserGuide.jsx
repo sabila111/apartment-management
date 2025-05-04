@@ -1,6 +1,6 @@
 const UserGuide = () => {
     return (
-        <div className="p-6 max-w-4xl mx-auto bg-white">
+        <div className="p-6 mt-24 max-w-4xl mx-auto bg-white">
             <h2 className="text-3xl text-cyan-800 font-bold mb-4">How It Works</h2>
             <p className="mb-4 text-gray-700">Follow these simple steps to use our platform efficiently:</p>
             

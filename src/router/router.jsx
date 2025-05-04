@@ -22,6 +22,8 @@ import Payment from "../pages/Dashboard/memberDashboard/Payment/Payment";
 import MakePayment from "../pages/Dashboard/memberDashboard/Payment/MakePayment";
 import ContactUs from "../home/contact/ContactUs";
 import UserGuide from "../pages/userGuide/UserGuide";
+import AdminOverview from "../pages/Dashboard/Admin/AdminOverview";
+import UserOverview from "../pages/Dashboard/userDashboard/UserOverview";
 
   const router = createBrowserRouter([
     {
@@ -91,8 +93,16 @@ import UserGuide from "../pages/userGuide/UserGuide";
           element:<AdminRoute><AdminProfile></AdminProfile> </AdminRoute>,
         },
         {
+          path: "adminOverview",
+          element:<AdminRoute><AdminOverview></AdminOverview></AdminRoute>,
+        },
+        {
           path: "manageMember",
           element:<AdminRoute><ManageMember></ManageMember></AdminRoute> ,
+        },
+        {
+          path: "memberOverview",
+          element:<AdminRoute><UserOverview></UserOverview></AdminRoute> ,
         },
         {
           path: "makeAnnouncement",
